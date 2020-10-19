@@ -1,7 +1,20 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     line-height: 1.2;
     font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
 }
 
 .container {
@@ -25,4 +38,49 @@ h2 {
     font-size: 50px;
     margin-top: 0;
     margin-bottom: 40px;
+}
+
+.purple-btn {
+    background-color: #5D16D5;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    display: block;
+    padding: 10px 40px;
+}
+
+.slider {
+    margin-bottom: 50px;
+}
+
+.slider__item {
+    position: relative;
+}
+
+.slider__img {
+    display: block;
+    max-width: 100%;
+}
+
+.slider__btn {
+    position: absolute;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    font-size: 18px;
+    left: 50px;
+    bottom: 85px;
+}
+
+.add-nav {
+    margin-bottom: 120px;
+}
+
+.add-nav__links {
+    display: flex;
+    align-items: center;
+}
+
+.add-nav__link {
+    font-size: 22px;
+    margin-right: 40px;
 }

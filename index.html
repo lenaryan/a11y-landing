@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Государственный музей изобразительных искусств имени А. С. Пушкина</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <nav>
+            <nav aria-label="Главное меню">
                 <ul>
                     <li><a href="#museum">Музей</a></li>
                     <li><a href="#">Посетителям</a></li>
@@ -21,18 +21,21 @@
     </header>
     <main>
         <h1 class="visually-hidden">Государственный музей изобразительных искусств имени А. С. Пушкина</h1>
-        <section class="banner" role="banner">
+        <section class="slider" role="banner">
             <div class="container">
-                Баннер
+                <div class="slider__item">
+                    <img class="slider__img" width="1032" height="599" src="/images/banner.jpg" alt="От Дюрера до Матисса, с десятого июля по первое ноября">
+                    <a href="#" class="slider__btn purple-btn">Билеты онлайн</a>
+                </div>
             </div>
         </section>
-        <div class="container">
-            <ul>
-                <li><a href="#">Купить билет</a></li>
-                <li><a href="#">Стать другом</a></li>
-                <li><a href="#">Онлайн-магазин</a></li>
+        <nav aria-label="Дополнительные ссылки" class="add-nav">
+            <ul class="container add-nav__links">
+                <li><a class="purple-btn add-nav__link" href="#">Купить билет</a></li>
+                <li><a class="purple-btn add-nav__link" href="#">Стать другом</a></li>
+                <li><a class="purple-btn add-nav__link" href="#">Онлайн-магазин</a></li>
             </ul>
-        </div>
+        </nav>
         <section id="exhibitions">
             <div class="container">
                 <h2>Выставки и события</h2>
