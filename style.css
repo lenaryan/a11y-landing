@@ -34,6 +34,12 @@ h2 {
     margin-bottom: 40px;
 }
 
+a:focus, button:focus, input:focus {
+    outline: 3px dotted #5d16d5;
+    outline-offset: 2px;
+    text-decoration: none;
+}
+
 .container {
     margin-left: auto;
     margin-right: auto;
@@ -77,6 +83,19 @@ h2 {
     margin-bottom: 75px;
     justify-content: space-between;
     padding-top: 30px;
+}
+
+.skiplink {
+    border-radius: 4px;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    z-index: 10;
+    transition: top 0.3s ease-in-out;
+}
+
+.skiplink:focus {
+    top: 10px;
 }
 
 .header-top__right {
@@ -126,7 +145,7 @@ h2 {
     margin-left: 8px;
     display: block;
     background-color: #C7D2E9;
-    background-repeat: 4px;
+    border-radius: 4px;
     font-size: 22px;
     text-transform: uppercase;
     padding: 13px 18px;
@@ -144,19 +163,22 @@ h2 {
     margin-left: 45px;
 }
 
-
-
-.skiplink {
-    border-radius: 4px;
-    position: absolute;
-    top: -100px;
-    left: 0;
-    z-index: 10;
-    transition: top 0.3s ease-in-out;
+.main-menu {
+    margin-bottom: 35px;
 }
 
-.skiplink:focus {
-    top: 10px;
+.main-menu__items {
+    display: flex;
+    align-items: center;
+}
+
+.main-menu__item {
+    margin-right: 40px;
+}
+
+.main-menu__link {
+    font-size: 18px;
+    color: inherit;
 }
 
 .slider {
@@ -207,4 +229,9 @@ h2 {
 .paragraph:first-of-type .paragraph__link {
     display: block;
     width: max-content;
+}
+
+.footer {
+    padding: 75px 0 95px;
+    background-color: #f1f1f1;
 }
