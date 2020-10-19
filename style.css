@@ -8,6 +8,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+section {
+    margin-bottom: 120px;
+}
+
 ul {
     margin: 0;
     padding: 0;
