@@ -55,6 +55,34 @@ h2 {
     padding: 10px 40px;
 }
 
+.grey-btn {
+    background-color: #C7D2E9;
+    font-size: 22px;
+    padding: 15px 40px;
+    border-radius: 8px;
+    display: block;
+    width: max-content;
+    color: #000;
+    text-decoration: none;
+}
+
+.skiplink-wrap {
+    position: relative;
+}
+
+.skiplink {
+    border-radius: 4px;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    z-index: 10;
+    transition: top 0.3s ease-in-out;
+}
+
+.skiplink:focus {
+    top: 10px;
+}
+
 .slider {
     margin-bottom: 50px;
 }
