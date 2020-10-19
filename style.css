@@ -34,7 +34,8 @@ h2 {
     margin-bottom: 40px;
 }
 
-a:focus, button:focus, input:focus {
+a:focus, button:focus, input:focus,
+.subscr__check input[type=checkbox]:focus + label:before {
     outline: 3px dotted #5d16d5;
     outline-offset: 2px;
     text-decoration: none;
@@ -63,6 +64,8 @@ a:focus, button:focus, input:focus {
     border-radius: 8px;
     display: block;
     padding: 10px 40px;
+    border: none;
+    font-family: inherit;
 }
 
 .grey-btn {
@@ -131,7 +134,6 @@ a:focus, button:focus, input:focus {
     transform: translateY(-50%);
 }
 
-
 .lang {
     margin-right: 10px;
 }
@@ -179,6 +181,11 @@ a:focus, button:focus, input:focus {
 .main-menu__link {
     font-size: 18px;
     color: inherit;
+    text-decoration: none;
+}
+
+.main-menu__link:hover {
+    text-decoration: underline;
 }
 
 .slider {
@@ -198,16 +205,16 @@ a:focus, button:focus, input:focus {
     bottom: 14%;
 }
 
-.add-nav {
+.use-nav {
     margin-bottom: 120px;
 }
 
-.add-nav__links {
+.use-nav__links {
     display: flex;
     align-items: center;
 }
 
-.add-nav__link {
+.use-nav__link {
     font-size: 22px;
     margin-right: 40px;
 }
@@ -234,4 +241,118 @@ a:focus, button:focus, input:focus {
 .footer {
     padding: 75px 0 95px;
     background-color: #f1f1f1;
+}
+
+.footer__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.add-nav {
+    margin-bottom: 40px;
+}
+
+.add-nav__link{
+    text-decoration: none;
+    font-size: 18px;
+    color: inherit;
+}
+
+.add-nav__link:hover {
+    text-decoration: underline;
+}
+
+.add-nav__item {
+    margin-bottom: 15px;
+}
+
+.footer__subtitle {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.footer__social {
+    display: flex;
+    align-items: center;
+}
+
+.footer__social-link {
+    margin-right: 25px;
+}
+
+.footer__social-link svg {
+    display: block;
+}
+
+.subscr {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 15px 20px;
+}
+
+.subscr__btn {
+    font-size: 18px;
+    padding: 12px 20px;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.subscr__check {
+    grid-column: 1/3;
+}
+
+.subscr__input {
+    position: relative;
+}
+
+.subscr__input input {
+    height: 44px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    width: 300px;
+    font-size: 18px;
+}
+
+.subscr__input label {
+    position: absolute;
+    font-size: 15px;
+    top: -15px;
+    left: 0;
+    background-color: #f1f1f1;
+    padding: 3px 0;
+    transition: padding 0.2s ease-in-out;
+}
+
+.subscr__input input:focus + label {
+    padding: 3px 5px;
+}
+
+.subscr__check label {
+    position: relative;
+    padding-left: 32px;
+}
+
+.subscr__check label:before {
+    content: '';
+    display: block;
+    width: 22px;
+    height: 22px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    line-height: 1;
+    text-align: center;
+}
+
+.subscr__check input[type=checkbox]:checked + label:before {
+    content: '✓'
 }
