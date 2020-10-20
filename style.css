@@ -48,6 +48,10 @@ a:focus, button:focus, input:focus,
     width: 95%;
 }
 
+.hidden {
+    display: none !important;
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
