@@ -30,6 +30,7 @@
                 </button>
             </div>
         </div>
+
         <div class="container">
             <nav class="main-menu" aria-label="Главное меню">
                 <ul class="main-menu__items">
@@ -37,17 +38,13 @@
                     <li class="main-menu__item"><a class="main-menu__link" href="#">Посетителям</a></li>
                     <li class="main-menu__item"><a class="main-menu__link" href="#exhibitions">Выставки и&nbsp;события</a></li>
                 </ul>
-
-                <!--
-                    <ul role="menu">
-                        <li role="none">
-                            <a role="menuitem">
-                -->
             </nav>
         </div>
     </header>
+
     <main id="main">
-        <h1 class="visually-hidden">Государственный музей изобразительных искусств имени А. С. Пушкина</h1>
+        <h1 class="visually-hidden">Государственный музей изобразительных искусств имени А.&nbsp;С.&nbsp;Пушкина</h1>
+
         <section class="slider" role="banner">
             <div class="container">
                 <div class="slider__item">
@@ -56,6 +53,7 @@
                 </div>
             </div>
         </section>
+
         <nav aria-label="Полезные ссылки" class="use-nav">
             <ul class="container use-nav__links">
                 <li><a class="purple-btn use-nav__link" href="#">Купить билет</a></li>
@@ -63,33 +61,94 @@
                 <li><a class="purple-btn use-nav__link" href="#">Онлайн-магазин</a></li>
             </ul>
         </nav>
+
         <section id="exhibitions">
             <div class="container">
-                <h2>Выставки и события</h2>
+                <h2>Выставки и&nbsp;события</h2>
             </div>
         </section>
+
         <section id="museum">
             <div class="container">
                 <h2>Музей</h2>
+                <div class="tabs">
+                    <button id="tab-title-1" class="tabs__btn grey-btn" role="tab" aria-controls="tab-panel-1">Здания</button>
+                    <button id="tab-title-2" class="tabs__btn" role="tab" aria-controls="tab-panel-2">История</button>
+                </div>
+
+                <div class="tab-panel" id="tab-panel-1" role="tabpanel" aria-labelledby="tab-title-1">
+                    <article class="tab-panel__item article">
+                        <img src="/images/museum-1.jpg" class="article__img" alt="" role="presentation">
+                        <h3 class="article__title">МЕМОРИАЛЬНАЯ КВАРТИРА С.&nbsp;Т.&nbsp;РИХТЕРА</h3>
+                        <p class="article__address">ул.&nbsp;Большая Бронная, 2/6, 16&nbsp;этаж, кв.&nbsp;58</p>
+                        <a href="#" class="article__link" aria-label="">Подробнее</a>
+                    </article>
+
+                    <article class="tab-panel__item article">
+                        <img src="/images/museum-2.jpg" class="article__img" alt="" role="presentation">
+                        <h3 class="article__title">ЦЭВ «МУСЕЙОН»</h3>
+                        <p class="article__address">Колымажный пер., 6/2, 3 (вход с&nbsp;Малого Знаменского переулка)</p>
+                        <a href="#" class="article__link" aria-label="">Подробнее</a>
+                    </article>
+
+                    <article class="tab-panel__item article">
+                        <img src="/images/museum-3.jpg" class="article__img" alt="" role="presentation">
+                        <h3 class="article__title">УСАДЬБА ЛОПУХИНЫХ</h3>
+                        <p class="article__address">Малый Знаменский пер., 3/5&nbsp;с4</p>
+                        <a href="#" class="article__link" aria-label="">Подробнее</a>
+                    </article>
+
+                    <article class="tab-panel__item article">
+                        <img src="/images/museum-4.jpg" class="article__img" alt="" role="presentation">
+                        <h3 class="article__title">УЧЕБНЫЙ МУЗЕЙ</h3>
+                        <p class="article__address">ул.&nbsp;Чаянова, 15</p>
+                        <a href="#" class="article__link" aria-label="">Подробнее</a>
+                    </article>
+                    
+                    <article class="tab-panel__item article">
+                        <img src="/images/museum-5.jpg" class="article__img" alt="" role="presentation">
+                        <h3 class="article__title">ОТДЕЛ ЛИЧНЫХ КОЛЛЕКЦИЙ</h3>
+                        <p class="article__address">ул.&nbsp;Волхонка, 10</p>
+                        <a href="#" class="article__link" aria-label="">Подробнее</a>
+                    </article>
+
+                    <article class="tab-panel__item article">
+                        <img src="/images/museum-6.jpg" class="article__img" alt="" role="presentation">
+                        <h3 class="article__title">ГАЛЕРЕЯ</h3>
+                        <p class="article__address">ул.&nbsp;Волхонка, 14</p>
+                        <a href="#" class="article__link" aria-label="">Подробнее</a>
+                    </article>
+                </div>
+
+                <div class="tab-panel" id="tab-panel-2" role="tabpanel" aria-labelledby="tab-title-2" hidden>
+                    <p>Государственный музей изобразительных искусств имени А.&nbsp;С.&nbsp;Пушкина – одно из&nbsp;крупнейших в&nbsp;России художественных собраний зарубежного искусства с&nbsp;древнейших времен до&nbsp;наших дней.</p>
+                    <p>В&nbsp;современной экспозиции представлены обширная учебная коллекция тонированных гипсовых слепков с&nbsp;произведений Античности, Средних веков и&nbsp;эпохи Возрождения, а&nbsp;также собрание подлинных произведений живописи, скульптуры, графики и&nbsp;декоративно-прикладного искусства.</p>
+                    <p>В&nbsp;залах первого этажа Главного здания представлены: произведения искусства Древнего Египта, Античности, собрание европейской живописи VIII–XVIII веков; два зала – Итальянский и&nbsp;Греческий дворики – занимают слепки. На&nbsp;втором этаже Главного здания в&nbsp;залах размещены слепки произведений искусства Древней Греции, Рима, Средних веков и&nbsp;Возрождения.</p>
+                    <p>В&nbsp;начале 2017&nbsp;года музей определил новое направление своей деятельности – Пушкинский XXI, – ориентированное на&nbsp;современное российское и&nbsp;западное искусство во&nbsp;всех аспектах – выставочном, образовательном и&nbsp;исследовательском. Таким образом, ГМИИ им.&nbsp;А.&nbsp;С.&nbsp;Пушкина представляет собой открытую, интерактивную сцену, демонстрирующую развитие мировой культуры с&nbsp;древности до&nbsp;наших дней, живое, знакомое с&nbsp;детства пространство для получения знаний и&nbsp;общения.</p>
+                    <a href="#" class="tab-panel__link">Читать далее</a>
+                </div>
             </div>
         </section>
+
         <section>
             <div class="container">
                 <h2>Онлайн-трансляции</h2>
                 <iframe class="video" title="Трансляция первого митапа Питералли" width="1030" height="610" src="https://www.youtube.com/embed/ZLWbpQ_MXN8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </section>
+
         <section class="excursion">
             <div class="container">
                 <h2>Экскурсии и&nbsp;лекции в&nbsp;прямом эфире</h2>
                 <div class="excursion-text">
-                    <p class="paragraph">С 1 июля вы можете присоединиться к нашим виртуальным мероприятиям — экскурсиям и лекциям для взрослых и детей, оплатив участие на сайте. Встречи будут проходить в прямом эфире на платформе Zoom; предусмотрен формат живого общения с возможностью задавать вопросы экскурсоводу (лектору).
+                    <p class="paragraph">С&nbsp;1&nbsp;июля вы можете присоединиться к&nbsp;нашим виртуальным мероприятиям — экскурсиям и&nbsp;лекциям для взрослых и&nbsp;детей, оплатив участие на&nbsp;сайте. Встречи будут проходить в&nbsp;прямом эфире на&nbsp;платформе Zoom; предусмотрен формат живого общения с&nbsp;возможностью задавать вопросы экскурсоводу (лектору).
                         <a class="paragraph__link" href="#">Подробнее.</a></p>
-                    <p class="paragraph">Мы будем благодарны за любое <a href="#" class="paragraph__link">пожертвование</a>. Все поступившие средства будут направлены на организацию онлайн-проектов для наших посетителей.</p>
+                    <p class="paragraph">Мы будем благодарны за&nbsp;любое <a href="#" class="paragraph__link">пожертвование</a>. Все поступившие средства будут направлены на&nbsp;организацию онлайн-проектов для наших посетителей.</p>
                 </div>
             </div>
         </section>
     </main>
+
     <footer class="footer">
         <div class="container footer__container">
             <div class="footer__left">
@@ -101,7 +160,7 @@
                     </ul>
                 </nav>
 
-                <p class="footer__subtitle">Соц. сети</p>
+                <p class="footer__subtitle">Соц.&nbsp;сети</p>
                 <div class="footer__social">
                     <a href="#" class="footer__social-link" aria-label="Напишите нам письмо">
                         <svg width="40" height="40" role="presentation" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M19.882 0c10.981 0 19.883 8.902 19.883 19.882 0 10.981-8.902 19.883-19.883 19.883C8.902 39.765 0 30.863 0 19.882 0 8.902 8.902 0 19.882 0zm3.241 21.208c-.145-.135-.232-.137-.38-.004-.436.39-.886.766-1.332 1.145-1.054.897-2.498.887-3.536-.016-.44-.384-.895-.755-1.335-1.142-.123-.108-.199-.11-.323.004-2.15 1.983-4.306 3.962-6.46 5.944-.053.05-.145.085-.12.2h20.03c-.017-.116-.088-.151-.14-.199l-1.934-1.787c-1.491-1.38-2.984-2.759-4.47-4.145zm8.136-7.226c-.085-.038-.14.062-.198.112-2.198 1.882-4.393 3.768-6.598 5.644-.185.158-.162.235-.002.382 1.431 1.313 2.855 2.633 4.282 3.951.751.695 1.507 1.386 2.256 2.084.14.13.205.121.255-.066.05-.19.055-.382.055-.575V17.09l-.002-2.888c0-.076.036-.183-.047-.22zm-23.186.001l-.04.012c-.127.068-.065.325-.065.5-.002 1.828-.001 3.657-.001 5.485 0 1.756-.002 3.512.001 5.268 0 .234.015.468.042.7.012.105.012.254.13.289.09.027.157-.097.227-.161 2.165-1.99 4.328-3.984 6.497-5.97.151-.139.165-.213.002-.351-2.149-1.827-4.292-3.662-6.44-5.49-.125-.107-.262-.339-.392-.27l.039-.012zm11.569-1.556H9.806c-.172 0-.345-.003-.511.052-.06.02-.144.016-.158.09-.011.06.062.088.103.124l.908.778c2.929 2.505 5.857 5.01 8.787 7.514.564.482.893.47 1.455-.012 2.993-2.566 5.989-5.13 8.983-7.696.27-.231.538-.464.82-.708-.241-.15-.48-.142-.715-.142H9.806h9.836z" fill="#121212"/></svg>
@@ -114,6 +173,7 @@
                     </a>
                 </div>
             </div>
+
             <div class="footer__right">
                 <p class="footer__subtitle">Подписка на&nbsp;новости</p>
                 <form class="subscr">
@@ -123,12 +183,18 @@
                     </div>
                     <div class="input-field subscr__check">
                         <input type="checkbox" id="check" required class="visually-hidden">
-                        <label for="check">Согласен на обработку персональных данных</label>
+                        <label for="check">Согласен на&nbsp;обработку персональных данных</label>
                     </div>
                     <button type="submit" class="purple-btn subscr__btn" aria-label="Подписаться на новости">Подписаться</button>
                 </form>
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+        })
+    </script>
 </body>
 </html>

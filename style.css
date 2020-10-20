@@ -77,6 +77,7 @@ a:focus, button:focus, input:focus,
     width: max-content;
     color: #000;
     text-decoration: none;
+    border: none;
 }
 
 .header-top {
@@ -218,6 +219,58 @@ a:focus, button:focus, input:focus,
     font-size: 22px;
     margin-right: 40px;
 }
+
+.tabs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.tabs__btn {
+    margin-right: 40px;
+}
+
+.tabs__btn:not(.grey-btn) {
+    background-color: transparent;
+    border: none;
+    font-family: inherit;
+    font-size: 22px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.tabs__btn:not(.grey-btn):focus {
+    text-decoration: none;
+}
+
+#tab-panel-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 65px 45px;
+}
+
+.article__img {
+    margin-bottom: 25px;
+}
+
+.article__title {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.srticle__address {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.article__link {
+    color: inherit;
+}
+
 
 .excursion-text {
     max-width: 700px;
