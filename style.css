@@ -170,6 +170,7 @@ a:focus, button:focus, input:focus,
     border: none;
     background-color: transparent;
     margin-left: 45px;
+    cursor: pointer;
 }
 
 .main-menu {
@@ -367,6 +368,7 @@ a:focus, button:focus, input:focus,
     padding: 12px 20px;
     grid-column: 2;
     grid-row: 1;
+    height: 44px;
 }
 
 .subscr__check {
@@ -387,6 +389,16 @@ a:focus, button:focus, input:focus,
     font-size: 18px;
 }
 
+.login-form__input input {
+    height: 44px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    width: 100%;
+    font-size: 18px;
+}
+
 .subscr__input label {
     position: absolute;
     font-size: 15px;
@@ -397,7 +409,18 @@ a:focus, button:focus, input:focus,
     transition: padding 0.2s ease-in-out;
 }
 
-.subscr__input input:focus + label {
+.login-form__input label {
+    position: absolute;
+    font-size: 15px;
+    top: -15px;
+    left: 0;
+    background-color: #fff;
+    padding: 3px 0;
+    transition: padding 0.2s ease-in-out;
+}
+
+.subscr__input input:focus + label,
+.login-form__input input:focus + label {
     padding: 3px 5px;
 }
 
@@ -425,4 +448,53 @@ a:focus, button:focus, input:focus,
 
 .subscr__check input[type=checkbox]:checked + label:before {
     content: '✓'
+}
+
+.overlay {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    display: none;
+}
+
+.dialog {
+    background-color: #ffffff;
+    width: 800px;
+    padding: 70px 150px 80px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 20%);
+}
+
+.dialog-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-weight: bold;
+    color: #5D16D5;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    font-size: 40px;
+}
+
+.login-form__input {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.login-form__btn {
+    width: 100%;
+}
+
+.error-text {
+    margin-top: 8px;
+    margin-bottom: 5px;
+    font-size: 13px;
+    color: #5D16D5;
 }
