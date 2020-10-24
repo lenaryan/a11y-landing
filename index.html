@@ -209,13 +209,13 @@
                 <form class="subscr">
                     <div class="input-field subscr__input">
                         <input type="email" id="text-field">
-                        <label for="text-field" hreflang="en">Email*</label>
-                        <p class="error-email error-text" hidden>Введите корректный e-mail</p>
+                        <label for="text-field" hreflang="en">Email</label>
+                        <p id="error-email" class="error-email error-text" hidden aria-live="polite">Введите корректный e-mail</p>
                     </div>
                     <div class="input-field subscr__check">
                         <input type="checkbox" id="check" class="visually-hidden">
                         <label for="check">Согласен на&nbsp;обработку персональных данных</label>
-                        <p class="error-check error-text" hidden>Необходимо дать согласие на&nbsp;обработку персональных данных</p>
+                        <p id="error-check" class="error-check error-text" hidden aria-live="polite">Необходимо дать согласие на&nbsp;обработку персональных данных</p>
                     </div>
                     <button type="submit" class="purple-btn subscr__btn" aria-label="Подписаться на новости">Подписаться</button>
                 </form>
@@ -225,18 +225,21 @@
 
     <div class="overlay">
         <div class="dialog" role="dialog" aria-label="Форма входа в аккаунт">
-            <button class="dialog-close" aria-label="Закрыть форму входа">&times;</button>
+            <button class="dialog-close" aria-labelledby="close-form">
+                <span id="close-form" aria-hidden="true">Закрыть форму входа</span>
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve" fill="#5D16D5"><g><g><path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717    L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859    c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287    l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285    L284.286,256.002z"/></g></g></svg>
+            </button>
             <h2>Вход</h2>
             <form class="login-form">
                 <div class="login-form__input">
                     <input type="text" id="login">
-                    <label for="login">Логин*</label>
-                    <p class="error-login error-text" hidden>Введите корректный логин</p>
+                    <label for="login">Логин</label>
+                    <p id="error-login" class="error-login error-text" hidden aria-live="polite">Введите корректный логин</p>
                 </div>
                 <div class="login-form__input">
                     <input type="password" id="password">
-                    <label for="password">Пароль*</label>
-                    <p class="error-pass error-text" hidden>Введите корректный пароль</p>
+                    <label for="password">Пароль</label>
+                    <p id="error-pass" class="error-pass error-text" hidden aria-live="polite">Введите корректный пароль</p>
                 </div>
                 <button type="submit" class="grey-btn login-form__btn" aria-label="Войти в аккаунт">Вход</button>
             </form>
@@ -266,6 +269,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.login').addEventListener('click', () => {
                 document.querySelector('.overlay').style.display = "block";
+                document.querySelector('.dialog-close').focus();
             })
 
             document.querySelector('.overlay').addEventListener('click', (e) => {
@@ -283,7 +287,60 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.subscr').addEventListener('submit', function(e) {
-                e.preventDefault; //??? doesn't fucking work
+                e.preventDefault();
+                let emailField = document.querySelector('#text-field');
+                let emailError = document.querySelector('.error-email');
+                let checkField = document.querySelector('#check');
+                let checkError = document.querySelector('.error-check');
+                if (!emailField.value) {
+                    emailError.removeAttribute('hidden');
+                    emailField.focus();
+                    emailField.setAttribute("aria-labelledby", "error-email");
+                } else {
+                    emailError.setAttribute('hidden', 'true');
+
+                    if (!checkField.checked) {
+                        checkField.focus();
+                        checkError.removeAttribute('hidden');
+                        checkField.setAttribute("aria-labelledby", "error-check");
+                    } else {
+                        checkError.setAttribute('hidden', 'true');
+
+                        document.querySelector('.subscr').reset();
+                    }
+                }
+                
+            })
+        })
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('.login-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                let loginField = document.querySelector('#login');
+                let loginError = document.querySelector('.error-login');
+                let passField = document.querySelector('#password');
+                let passError = document.querySelector('.error-pass');
+                if (!loginField.value) {
+                    loginError.removeAttribute('hidden');
+                    loginField.focus();
+                    loginField.setAttribute("aria-labelledby", "error-login");
+                } else {
+                    loginError.setAttribute('hidden', 'true');
+
+                    if (!passField.value) {
+                        passField.focus();
+                        passError.removeAttribute('hidden');
+                        passField.setAttribute("aria-labelledby", "error-pass");
+                    } else {
+                        passError.setAttribute('hidden', 'true');
+
+                        document.querySelector('.login-form').reset();
+                        document.querySelector('.overlay').style.display = "none";
+                    }
+                }
+                
             })
         })
     </script>

@@ -473,14 +473,17 @@ a:focus, button:focus, input:focus,
 
 .dialog-close {
     position: absolute;
-    top: 30px;
+    top: 40px;
     right: 40px;
-    font-weight: bold;
-    color: #5D16D5;
+    width: 30px;
+    height: 30px;
     padding: 0;
     border: none;
     background-color: transparent;
-    font-size: 40px;
+}
+
+#close-form {
+    display: none;
 }
 
 .login-form__input {
