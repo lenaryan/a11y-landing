@@ -22,22 +22,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const dialog = new A11yDialog(el);
 
     document.querySelector('.login').addEventListener('click', () => {
-        document.querySelector('.overlay').style.display = "block";
-        //document.querySelector('dialog').setAttribute('open', 'true');
+        el.style.display = "block";
         document.querySelector('.dialog-close').focus();
+        document.querySelector('footer').setAttribute('aria-hidden', 'true');
+        document.querySelector('header').setAttribute('aria-hidden', 'true');
+        document.querySelector('main').setAttribute('aria-hidden', 'true');
         dialog.show();
     })
 
-    document.querySelector('.overlay').addEventListener('click', (e) => {
+    //doesn't fucking work :-/
+    el.addEventListener('click', (e) => {
         if (e.target.classList[0] == 'overlay') {
-            document.querySelector('.overlay').style.display = "none";
+            el.style.display = "none";
             dialog.hide();
+            document.querySelector('footer').removeAttribute('aria-hidden');
+            document.querySelector('header').removeAttribute('aria-hidden');
+            document.querySelector('main').removeAttribute('aria-hidden');
         }
     })
 
     document.querySelector('.dialog-close').addEventListener('click', (e) => {
-        document.querySelector('.overlay').style.display = "none";
+        el.style.display = "none";
         dialog.hide();
+        document.querySelector('footer').removeAttribute('aria-hidden');
+        document.querySelector('header').removeAttribute('aria-hidden');
+        document.querySelector('main').removeAttribute('aria-hidden');
         document.querySelector('.login').focus();
     })
 });
