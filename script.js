@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 checkField.setAttribute("aria-labelledby", "error-check");
             } else {
                 checkError.setAttribute('hidden', 'true');
-
+                document.querySelector('.subscr__success').removeAttribute('hidden');
                 document.querySelector('.subscr').reset();
             }
         }
@@ -101,11 +101,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 passField.setAttribute("aria-labelledby", "error-pass");
             } else {
                 passError.setAttribute('hidden', 'true');
-
+                document.querySelector('.login__success').removeAttribute('hidden');
                 document.querySelector('.login-form').reset();
-                document.querySelector('.overlay').style.display = "none";
+                setTimeout(() => {
+                    document.querySelector('.overlay').style.display = "none";
+                }, 5000)
             }
         }
         
     })
 })
+
+// yes, I know I could refactor

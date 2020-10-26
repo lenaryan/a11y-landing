@@ -472,7 +472,8 @@ dialog[open] {
     box-sizing: border-box;
     position: absolute;
     left: 50%;
-    transform: translate(-50%, 20%);
+    transform: translateX(-50%);
+    top: 20%;
 }
 
 .dialog-close {
@@ -504,4 +505,14 @@ dialog[open] {
     margin-bottom: 5px;
     font-size: 13px;
     color: #5D16D5;
+}
+
+.subscr__success {
+    font-weight: bold;
+}
+
+.login__success {
+    font-weight: bold;
+    position: relative;
+    top: -15px;
 }
