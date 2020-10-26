@@ -1,3 +1,6 @@
+const el = document.querySelector('.overlay');
+const dialog = new A11yDialog(el);
+
 // switching between tabs
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.tabs__btn').forEach(btn => {
@@ -18,9 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // open/close modal
 document.addEventListener('DOMContentLoaded', () => {
-    const el = document.querySelector('.overlay');
-    const dialog = new A11yDialog(el);
-
     document.querySelector('.login').addEventListener('click', () => {
         el.style.display = "block";
         document.querySelector('.dialog-close').focus();
@@ -106,8 +106,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.querySelector('footer').removeAttribute('aria-hidden');
                 document.querySelector('header').removeAttribute('aria-hidden');
                 document.querySelector('main').removeAttribute('aria-hidden');
-                document.querySelector('.login').focus();
-            setTimeout(() => {
+                setTimeout(() => {
+                    dialog.hide();
+                    document.querySelector('.login').focus();
                     document.querySelector('.overlay').style.display = "none";
                 }, 3000)
             }
