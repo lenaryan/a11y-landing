@@ -105,8 +105,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.querySelector('.login-form').reset();
                 setTimeout(() => {
                     document.querySelector('.overlay').style.display = "none";
+                    document.querySelector('footer').removeAttribute('aria-hidden');
+                    document.querySelector('header').removeAttribute('aria-hidden');
+                    document.querySelector('main').removeAttribute('aria-hidden');
                     document.querySelector('.login').focus();
-                }, 5000)
+                }, 3000)
             }
         }
         
